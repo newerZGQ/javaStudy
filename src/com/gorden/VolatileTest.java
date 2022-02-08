@@ -1,3 +1,5 @@
+package com.gorden;
+
 public class VolatileTest implements Test {
     private volatile int count = 0;
     private Runnable runnable = () -> {
@@ -12,5 +14,10 @@ public class VolatileTest implements Test {
         for (int i = 0; i < 1000; i++) {
             new Thread(runnable).start();
         }
+        test();
+    }
+
+    public static void test() {
+
     }
 }
